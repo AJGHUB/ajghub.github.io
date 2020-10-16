@@ -17,7 +17,7 @@
             <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
             <label for="base">Base Color</label>
-            <input id="base" type="color" name="base" value="#ffc600">
+            <input id="base" type="color" name="base" value="#bb0fd2">
 
             <img src="https://images.unsplash.com/photo-1594372365401-3b5ff14eaaed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80">
             <!-- <img src="https://images.unsplash.com/photo-1591610265969-70b99bc29ade?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"> -->
@@ -28,7 +28,7 @@
 
             :root {
                 --base: #bb0fd2;
-                --spacing: 10px;
+                --spacing: 15px;
                 --blur: 10px;
             }
 
@@ -37,13 +37,15 @@
             padding: var(--spacing);
             background: var(--base);
             filter: blur(var(--blur));
+            margin-top: var(--spacing);
+            border-radius: 2em;
         }
 
 
         body {
             text-align: center;
-            background: #193549;
-            color: white;
+            background: #2E005E;
+            color: #15BDD7;
             font-family: 'helvetica neue', sans-serif;
             font-weight: 100;
             font-size: 50px;
