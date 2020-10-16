@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Variables JS</title>
-</head>
-<body>
-    <h2>Update CSS Variables with JS</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Variables JS</title>
+    </head>
 
-    <div class="controls">
-        <label for="spacing">Spacing:</label>
-        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+    <body>
+        <h2>Update CSS Variables with JS</h2>
 
-        <label for="blur">Blur</label>
-        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+        <div class="controls">
+            <label for="spacing">Spacing:</label>
+            <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
 
-        <label for="base">Base Color</label>
-        <input id="base" type="color" name="base" value="#ffc600">
+            <label for="blur">Blur</label>
+            <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
-        <img src="https://images.unsplash.com/photo-1594372365401-3b5ff14eaaed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80">
-        <!-- <img src="https://images.unsplash.com/photo-1591610265969-70b99bc29ade?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"> -->
-    </div>
+            <label for="base">Base Color</label>
+            <input id="base" type="color" name="base" value="#ffc600">
 
-    <style>
-        /* unrelated to CSS vars */
+            <img src="https://images.unsplash.com/photo-1594372365401-3b5ff14eaaed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80">
+            <!-- <img src="https://images.unsplash.com/photo-1591610265969-70b99bc29ade?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"> -->
+        </div>
 
-        :root {
-            --base: #ffc600;
-            --spacing: 10px;
-            --blur: 10px;
+        <style>
+            /* unrelated to CSS vars */
+
+            :root {
+                --base: #ffc600;
+                --spacing: 10px;
+                --blur: 10px;
+            }
+
+
+        img {
+            padding: var(--spacing);
+            background: var(--base);
+            filter: blur(var(--blur));
         }
 
-    img {
-        padding: var(--spacing);
-        background: var(--base);
-        filter: blur(var(--blur));
-    }
 
-    body {
-        text-align: center;
-        background: #193549;
-        color: white;
-        font-family: 'helvetica neue', sans-serif;
-        font-weight: 100;
-        font-size: 50px;
-    }
+        body {
+            text-align: center;
+            background: #193549;
+            color: white;
+            font-family: 'helvetica neue', sans-serif;
+            font-weight: 100;
+            font-size: 50px;
+        }
 
-    .controls {
-        margin-bottom: 50px;
-    }
 
-    input {
-        width: 100px;
-    }
+        .controls {
+            margin-bottom: 50px;
+        }
 
-    </style>
 
-    <script type="text/javascript" src="script.js"></script>
-</body>
+        input {
+            width: 100px;
+        }
+
+        </style>
+
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
 </html>
