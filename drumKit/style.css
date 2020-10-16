@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  background: url('/drumKitJS/drumPhoto.jpg') bottom center;
+  background: url('drumPhoto.jpg') bottom center;
   background-size: contain;
   min-height: 100vh;
   position: relative;
