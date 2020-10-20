@@ -88,48 +88,48 @@ const inventors = [
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
     
-    const category = document.querySelector('.mw-category');
-    const links = Array.from(category.querySelectorAll('a'));
-    const de = links
-                .map(link => link.textContent)
-                .filter(streetName => streetName.includes('de'));
+    // const category = document.querySelector('.mw-category');
+    // const links = Array.from(category.querySelectorAll('a'));
+    // const de = links
+    //             .map(link => link.textContent)
+    //             .filter(streetName => streetName.includes('de'));
 
-    // const boulevards = [
-    //     'Boulevards of Paris',
-    //     'City walls of Paris',
-    //     'Thiers wall',
-    //     'Wall of Charles V',
-    //     'Wall of Philip II Augustus',
-    //     'City gates of Paris',
-    //     "Haussmann's renovation of Paris",
-    //     'Boulevards of the Marshals',
-    //     'Boulevard Auguste-Blanqui',
-    //     'Boulevard Barbès',
-    //     'Boulevard Beaumarchais',
-    //     "Boulevard de l'Amiral-Bruix",
-    //     'Boulevard des Capucines',
-    //     'Boulevard de la Chapelle',
-    //     'Boulevard de Clichy',
-    //     'Boulevard du Crime',
-    //     'Boulevard Haussmann',
-    //     "Boulevard de l'Hôpital",
-    //     'Boulevard des Italiens',
-    //     'Boulevard de la Madeleine',
-    //     'Boulevard de Magenta',
-    //     'Boulevard Montmartre',
-    //     'Boulevard du Montparnasse',
-    //     'Boulevard Raspail',
-    //     'Boulevard Richard-Lenoir',
-    //     'Boulevard de Rochechouart',
-    //     'Boulevard Saint-Germain',
-    //     'Boulevard Saint-Michel',
-    //     'Boulevard de Sébastopol',
-    //     'Boulevard de Strasbourg',
-    //     'Boulevard du Temple',
-    //     'Boulevard Voltaire',
-    //     'Boulevard de la Zone'
-    //   ].filter(b => b.includes('de'))
-    //   console.log('Boulevards', boulevards)
+    const boulevards = [
+        'Boulevards of Paris',
+        'City walls of Paris',
+        'Thiers wall',
+        'Wall of Charles V',
+        'Wall of Philip II Augustus',
+        'City gates of Paris',
+        "Haussmann's renovation of Paris",
+        'Boulevards of the Marshals',
+        'Boulevard Auguste-Blanqui',
+        'Boulevard Barbès',
+        'Boulevard Beaumarchais',
+        "Boulevard de l'Amiral-Bruix",
+        'Boulevard des Capucines',
+        'Boulevard de la Chapelle',
+        'Boulevard de Clichy',
+        'Boulevard du Crime',
+        'Boulevard Haussmann',
+        "Boulevard de l'Hôpital",
+        'Boulevard des Italiens',
+        'Boulevard de la Madeleine',
+        'Boulevard de Magenta',
+        'Boulevard Montmartre',
+        'Boulevard du Montparnasse',
+        'Boulevard Raspail',
+        'Boulevard Richard-Lenoir',
+        'Boulevard de Rochechouart',
+        'Boulevard Saint-Germain',
+        'Boulevard Saint-Michel',
+        'Boulevard de Sébastopol',
+        'Boulevard de Strasbourg',
+        'Boulevard du Temple',
+        'Boulevard Voltaire',
+        'Boulevard de la Zone'
+      ].filter(b => b.includes('de'))
+      console.log('Boulevards', boulevards)
 
 
     // 7. sort Exercise
