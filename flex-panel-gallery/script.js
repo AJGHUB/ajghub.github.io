@@ -25,4 +25,4 @@ var toggleActive = function (e) {
 
 panels.forEach(panel => panel.addEventListener('click', toggleOpen))
 
-panels.forEach(panel.addEventListener('transitioned', toggleActive))
+panels.forEach(panel => panel.addEventListener('transitioned', toggleActive))
