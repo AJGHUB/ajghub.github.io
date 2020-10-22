@@ -32,60 +32,72 @@ body {
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s,
+    filter 0.8s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.8);
 }
 
 .panel {
-    background-image: url(https://images.unsplash.com/photo-1573196872258-41425124bf5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  background-image: url(https://images.unsplash.com/photo-1573196872258-41425124bf5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
 }
 .panel {
-    background-image: url(https://images.unsplash.com/photo-1527527977655-7a3cc0a40e9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+  background-image: url(https://images.unsplash.com/photo-1527527977655-7a3cc0a40e9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
 }
 .panel {
-    background-image: url(https://images.unsplash.com/photo-1491987131443-9d8633fc8caf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);
+  background-image: url(https://images.unsplash.com/photo-1491987131443-9d8633fc8caf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);
 }
 .panel {
-    background-image: url(https://images.unsplash.com/photo-1535741656156-00f826d0d33b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)
+  background-image: url(https://images.unsplash.com/photo-1535741656156-00f826d0d33b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
 }
 .panel {
-    background-image: url(https://images.unsplash.com/photo-1535741656156-00f826d0d33b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)
+  background-image: url(https://images.unsplash.com/photo-1535741656156-00f826d0d33b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
 }
 
 /* Flex Children */
-.panel>* {
-    margin: 0;
-    width: 100%;
-    transition: transform 0.5s;
-    flex: 1 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.panel>*:first-child {
-    transform: translateY(100%);
+.panel > *:first-child {
+  transform: translateY(100%);
 }
 
-.panel.open-active>*:first-child {
-    transform: translateY(100%);
+.panel.open-active > *:first-child {
+  transform: translateY(100%);
 }
 
-.panel.open-active>*:last-child {
-    transform: translateY(0);
+.panel.open-active > *:last-child {
+  transform: translateY(0);
 }
 
 .panel p {
-    text-transform: uppercase;
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-    font-size: 2em;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial,
+    sans-serif;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
 }
 
 .panel p:nth-child(2) {
-    font-size: 4em;
+  font-size: 4em;
 }
 
 .panel.open {
-    flex: 5;
-    font-size: 40px;
-    filter: none;
+  flex: 5;
+  font-size: 40px;
+  filter: none;
 }
