@@ -1,15 +1,91 @@
 html {
-    box-sizing: border-box;
-    background: #ffc600;
-    font-family: 'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #6b0f9c;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.panel {
+    background-image: url(https://images.unsplash.com/photo-1573196872258-41425124bf5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+}
+.panel {
+    background-image: url(https://images.unsplash.com/photo-1527527977655-7a3cc0a40e9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+}
+.panel {
+    background-image: url(https://images.unsplash.com/photo-1491987131443-9d8633fc8caf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);
+}
+.panel {
+    background-image: url(https://images.unsplash.com/photo-1535741656156-00f826d0d33b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)
+}
+.panel {
+    background-image: url(https://images.unsplash.com/photo-1535741656156-00f826d0d33b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)
+}
+
+/* Flex Children */
+.panel>* {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel>*:first-child {
+    transform: translateY(100%);
+}
+
+.panel.open-active>*:first-child {
+    transform: translateY(100%);
+}
+
+.panel.open-active>*:last-child {
+    transform: translateY(0);
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+    font-size: 4em;
+}
+
+.panel.open {
+    flex: 5;
+    font-size: 40px;
+    filter: none;
 }
