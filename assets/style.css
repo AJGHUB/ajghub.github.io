@@ -115,7 +115,7 @@
   
   .container-block:hover .description {
     background: var(--color-accent);
-    color: #333333;
+    color: #f0f323;
   }
   
   .panel {
