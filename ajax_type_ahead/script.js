@@ -3,22 +3,23 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 const cities = [];
 
 window.fetch(endpoint)
-  .then(response => response.json())
+  .then(reply => reply.json())
   .then(data => cities.push(...data))
 
 function findMatches (wordToMatch, cities) {
   return cities.filter(place => {
+    // find out here if city or state matches what was searched for:
     const regex = new RegExp(wordToMatch, 'gi')
     return place.city.match(regex) || place.state.match(regex)
-  })
+  });
 }
 
 function numberWithCommas (x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-function displayMatches () {
-  const matchArr = findMatches(this.value, cities)
+function displayMatches() {
+  const matchArr = findMatches(this.value, cities);
   const regex = new RegExp(this.value, 'gi')
 
   const html = matchArr.map(place => {
