@@ -55,7 +55,7 @@ const currentYear = (new Date()).getFullYear()
 
 
 //Array.prototype.every() //is everyone 19 or older?
-    var isEveryoneAdult = people.every(p => currentYear = p.year >= 19)
+    var isEveryoneAdult = people.every(p => currentYear - p.year >= 19)
     console.log({ isEveryoneAdult })
 
 
