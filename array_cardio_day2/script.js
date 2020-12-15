@@ -45,9 +45,11 @@ const comments = [
 ]
 
 const currentYear = (newDate()).getFullYear()
+
 //Some and every checks:
 //Array.prototype.some() //is at least one person 19 or older?
     var isAdult = people.some(p => currentYear - p.year >= 19)
     console.log({ isEveryoneAdult })
+
 
 
