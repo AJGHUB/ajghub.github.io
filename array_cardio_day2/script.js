@@ -1,3 +1,5 @@
+//## Array Cardio Day 2
+
 const people = [
 {
     name: 'Alice',
@@ -44,12 +46,30 @@ const comments = [
 }
 ]
 
-const currentYear = (newDate()).getFullYear()
+const currentYear = (new Date()).getFullYear()
 
 //Some and every checks:
 //Array.prototype.some() //is at least one person 19 or older?
     var isAdult = people.some(p => currentYear - p.year >= 19)
+    console.log({ isAdult })
+
+
+//Array.prototype.every() //is everyone 19 or older?
+    var isEveryoneAdult = people.every(p => currentYear = p.year >= 19)
     console.log({ isEveryoneAdult })
 
+
+//Array.prototype.find()
+//Find is like filter, instead returns the one youre looking for
+//Find the comment with the ID of 823423
+    const comment = comments.find(c => c.id === 334455)
+    console.log(comment)
+
+//Array.prototype.findIndex()
+//Find the comment with this ID
+//Delete the comment with the ID of 334455
+    const index = comments.findIndex(c => c.id === 334455)
+    comments.splice(index, 1)
+    console.table(comments)
 
 
