@@ -21,14 +21,14 @@ const inventors = [
 
 
    // Array.prototype.filter()
-    // 1. Filter the list of inventors for those who were born in the 1500's
+    // 1. Filter the list of inventors for those who were born in the 1500's________________________________________
     const fifteen = inventors.filter(inventor => 
         (inventor.year >= 1500 && inventor.year < 1600))
     console.table(fifteen);
     
 
     // Array.prototype.map()
-    // 2. Give us an array of the inventors first and last names
+    // 2. Give us an array of the inventors first and last names____________________________________________________
 
     const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
     console.log(fullNames)
@@ -36,7 +36,7 @@ const inventors = [
 
 
     // Array.prototype.sort()
-    // 3. Sort the inventors by birthdate, oldest to youngest
+    // 3. Sort the inventors by birthdate, oldest to youngest_______________________________________________________
   
     //code:
     // const ordered = inventors.sort(function(a, b){
@@ -54,7 +54,7 @@ const inventors = [
 
 
     // Array.prototype.reduce()
-    // 4. How many years did all the inventors live all together?
+    // 4. How many years did all the inventors live all together?____________________________________________________
     
     //code
     const totalYears = inventors.reduce((total, inventor) => {
@@ -67,9 +67,7 @@ const inventors = [
     // console.log(totalYears)
     
 
-
-
-    // 5. Sort the inventors by years lived
+    // 5. Sort the inventors by years lived___________________________________________________________________________
     // const oldest = inventors.sort(function(a, b) {
     //     const lastInventor = a.passed - a.year;
     //     const nextInventor = b.passed - b.year;
@@ -85,7 +83,7 @@ const inventors = [
 
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris_______________________________________________________
 
     
     // const category = document.querySelector('.mw-category');
@@ -132,14 +130,14 @@ const inventors = [
       console.log('Boulevards', boulevards)
 
 
-    // 7. sort Exercise
+    // 7. sort Exercise__________________________________________________________________________________________________________
     // Sort the people alphabetically by last name
     const sortedPeople = people.sort((p1, p2) => p1.split(', ')[1] - p2.split(', ')[1])
     console.log('Sorted people', sortedPeople)
 
 
      // 8. Reduce Exercise
-    // Sum up the instances of each of these
+    // Sum up the instances of each of these ____________________________________________________________________________________
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     const tally = data.reduce((acc, i) => {
     if (!acc[i]) {
