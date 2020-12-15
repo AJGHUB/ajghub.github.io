@@ -50,13 +50,24 @@ const currentYear = (new Date()).getFullYear()
 
 //Some and every checks:
 //Array.prototype.some() //is at least one person 19 or older?
+
+//method 1 > 
+// const isAdult = people.some(function(person) {
+//     const currentYear = (newDate()).getFullYear();
+//     if(currentYear - person.year >= 19) {
+//         return true;
+//     }
+// })
+
+
+//method uses implicit return of curly brackets - same as above, cleaner
     var isAdult = people.some(p => currentYear - p.year >= 19)
     console.log({ isAdult })
 
 
 //Array.prototype.every() //is everyone 19 or older?
-    var isEveryoneAdult = people.every(p => currentYear - p.year >= 19)
-    console.log({ isEveryoneAdult })
+    var isAllAdults = people.every(p => currentYear - p.year >= 19)
+    console.log({ isAllAdults })
 
 
 //Array.prototype.find()
