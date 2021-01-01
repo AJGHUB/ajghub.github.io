@@ -23,7 +23,7 @@ function draw(e) {
     if (!isDrawing) return
 
 
-    ctx.strokeStyle = `hsl(${color.hue}, ${color.saturation}%, color.lightness}%)`
+    ctx.strokeStyle = `hsl(${color.hue}, ${color.saturation}%, ${color.lightness}%)`
     ctx.beginPath()
     ctx.moveTo(lastX, lastY)
     ctx.lineTo(e.offsetX, e.offsetY)
