@@ -27,14 +27,14 @@ function draw(e) {
     ctx.beginPath()
     ctx.moveTo(lastX, lastY)
     ctx.lineTo(e.offsetX, e.offsetY)
-    ctx.stroke()
+    ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY]
 
     color.hue++
     if (color.hue >= 360) {
         color.hue = 0
     }
-    if (ctx.lineWidth >= 100 || ctx.lineWidth <=1) {
+    if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
         direction = !direction
     }
 
@@ -43,7 +43,8 @@ function draw(e) {
 
     if (direction) {
         ctx.lineWidth++
-    } else {ctx.lineWidth--
+    } else {
+        ctx.lineWidth--
     }
 }
 
