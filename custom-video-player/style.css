@@ -1,12 +1,12 @@
 html {
-    box-sizing: border-box;   
-}
-
-*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
     box-sizing: inherit;
-}
-
-body {
+  }
+  
+  body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,28 +16,33 @@ body {
     background-size: cover;
     align-items: center;
     justify-content: center;
-}
-
-.player {
+  }
+  
+  .player {
     max-width: 750px;
-    border: 5px solid rgbs(0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     position: relative;
     font-size: 0;
-    overflow: hidden;   
-}
-
-/* css applies here in full-screen only______________________________________________________________ */
-.player:fullscreen {
+    overflow: hidden;
+  }
+  
+  /* This css is only applied when fullscreen is active. */
+  .player:fullscreen {
     max-width: none;
     width: 100%;
-}
-
-player:-webkit-full-screen {
+  }
+  
+  .player:-webkit-full-screen {
     max-width: none;
     width: 100%;
-}
-
-.player__button {
+  }
+  
+  .player__video {
+    width: 100%;
+  }
+  
+  .player__button {
     background: none;
     border: 0;
     line-height: 1;
@@ -48,18 +53,22 @@ player:-webkit-full-screen {
     cursor: pointer;
     max-width: 50px;
     transition: background .25s;
-}
-
-.player__button:hover {
+  }
+  
+  .player__button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .player__button:focus {
     border-color: #ffc600;
-}
-
-.player__slider {
+  }
+  
+  .player__slider {
     width: 10px;
     height: 30px;
-}
-
-.player__controls {
+  }
+  
+  .player__controls {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -67,41 +76,41 @@ player:-webkit-full-screen {
     transform: translateY(100%) translateY(-5px);
     transition: all .3s;
     flex-wrap: wrap;
-    background: rgba(0, 0, 0.1);
-}
-
-.player:hover .player__controls, .player.hover .player__controls {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .player:hover .player__controls, .player.hover .player__controls {
     transform: translateY(0);
-}
-
-.player:hover .progress {
+  }
+  
+  .player:hover .progress {
     height: 15px;
-}
-
-.player__controls>* {
+  }
+  
+  .player__controls>* {
     flex: 1;
-}
-
-.progress {
+  }
+  
+  .progress {
     flex: 10;
     position: relative;
     display: flex;
     flex-basis: 100%;
     height: 5px;
     transition: height 0.3s;
-    background: rgba (0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     cursor: ew-resize;
-}
-
-.progress__filled {
+  }
+  
+  .progress__filled {
     width: 50%;
     background: #ffc600;
     flex: 0;
     flex-basis: 50%;
-}
-
-/* unholy css to style input type="range" */
-input[type=range] {
+  }
+  
+  /* unholy css to style input type="range" */
+  input[type=range] {
     -webkit-appearance: none;
     background: transparent;
     width: 100%;
