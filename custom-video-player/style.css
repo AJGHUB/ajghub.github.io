@@ -12,7 +12,7 @@ html {
     display: flex;
     background: #7A419B;
     min-height: 100vh;
-    background: linear-gradient(135deg, #7c1599 0%, #921099 48%, #7e4ae8 100%);
+    background: linear-gradient(135deg, #841ba1 0%, #921099 48%, #6320e9 100%);
     background-size: cover;
     align-items: center;
     justify-content: center;
