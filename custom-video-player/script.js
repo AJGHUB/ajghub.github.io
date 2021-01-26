@@ -9,8 +9,12 @@ const skipButtons = player.querySelectorAll('[data-skip]')
 const ranges = player.querySelectorAll('.player__slider')
 const fullscreen = player.querySelector('.player__fullscreen')
 
-const togglePlay = () =>
-  video.paused ? video.play() : video.pause()
+function togglePlay() {
+  const method = video.paused ? 'play' : 'pause';
+  video[method]();
+}
+  
+
 
 
 // /*_________________________Build out functions___________________*/
