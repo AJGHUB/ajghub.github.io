@@ -7,7 +7,8 @@ window.addEventListener('keyup', (e) => {
      pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
         
      //check array includes secret code Wonderland
-     if (pressed.join('').includes(secretCode)) {
+	 if (pressed.join('')
+	 .includes(secretCode)) {
          console.log('DING DING!');
         cornify_add();
         }
