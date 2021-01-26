@@ -2,18 +2,19 @@ const pressed = [];
 const secretCode = 'alice';
 
 window.addEventListener('keyup', (e) => {
-    console.log(e.key);
-     pressed.push(e.key);
+	// console.log(e.key); 
+	pressed.push(e.key);
      pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
         
-     //check array includes secret code Wonderland
+     //check array includes secret code 
 	 if (pressed.join('')
-	 .includes(secretCode)) {
-         console.log('DING DING!');
+	 	.includes(secretCode)) {
+        //  console.log('DING DING!');
         cornify_add();
         }
-    console.log(pressed);
+    // console.log(pressed);
 });
+
 
 
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
